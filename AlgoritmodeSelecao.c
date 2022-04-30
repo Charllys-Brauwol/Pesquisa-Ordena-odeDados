@@ -28,7 +28,7 @@ void selection_sort (int vetor[],int max) {
   printf ("\n");
 }
 
-main () {
+int main () {
   int max, i;
   /* Lê o máximo de algarismos do vetor*/
   printf("Digite o tamanho do vetor:\n");
