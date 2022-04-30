@@ -6,17 +6,17 @@ void selection_sort (int vetor[],int max) {
   
   for (i = 0; i < (max - 1); i++) {
     /* O minimo é o primeiro número não ordenado ainda */
-    min = i; posicao
+    min = i;
     for (j = i+1; j < max; j++) {
       /* Caso tenha algum numero menor ele faz a troca do minimo*/
-      if (vetor[j] < vetor[min]){ conteudo
-  			 min = j; posicao
+      if (vetor[j] < vetor[min]){
+  			 min = j;
       }
     }
     /* Se o minimo for diferente do primeiro numero não ordenado ele faz a troca para ordena-los*/
     if (i != min) {
       aux = vetor[i];
-      vetor[i] = vetor[min]; conteudo
+      vetor[i] = vetor[min];
       vetor[min] = aux;
     }
 }
