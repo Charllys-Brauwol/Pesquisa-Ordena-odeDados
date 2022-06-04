@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include <math.h>
 #define MAX 10
 void merge (int *V, int inicio, int meio, int fim){
