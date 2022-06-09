@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <math.h>
 #define MAX 10
+
+//Função que ordena o vetor
 void merge (int *V, int inicio, int meio, int fim){
 	int *temp, p1, p2, tamanho, i, j, k;
 	int fim1 = 0, fim2 = 0;
@@ -9,6 +11,7 @@ void merge (int *V, int inicio, int meio, int fim){
 	p1 = inicio;
 	p2 = meio + 1;
 	temp = (int *) malloc(tamanho *sizeof(int));
+
 	if(temp != NULL){
 		for(i = 0; i < tamanho; i++){
 			if(!fim1 && !fim2){
@@ -33,13 +36,15 @@ void merge (int *V, int inicio, int meio, int fim){
 	}
 	free(temp);
 }
+
+//Função que Divide o vetor em duas metades 
 void mergesort(int *V, int inicio, int fim){
 	int meio;
 	if(inicio < fim){
 		meio = floor((inicio+fim)/2);
 		mergesort(V, inicio, meio);
 		mergesort(V, meio+1, fim);
-		merge(V, inicio, meio, fim);
+		merge(V, inicio, meio, fim);//junta os vetores organizados
 	}
 }
 
